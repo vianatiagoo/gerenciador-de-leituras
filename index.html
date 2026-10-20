@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Leituras</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+ <header class="cabecalho">
+  <h1>Minha Biblioteca</h1>
+
+  <button type="button" id="abrir-cadastro">
+    + Adicionar livro
+  </button>
+</header>
+
+<dialog id="janela-livro">
+  <h2 id="titulo-janela">Adicionar livro</h2>
+  
+  <form id="form-livro">
+  
+   <div>
+    <label for="titulo">Título do livro</label>
+    <input type="text" id="titulo" name="titulo" required>
+  </div>
+
+  <div>
+    <label for="autor">Autor</label>
+    <input type="text" id="autor" name="autor" required>
+  </div>
+<div>
+  <label for="status">Status de leitura</label>
+
+  <select id="status" name="status">
+    <option value="quero-ler">Quero ler</option>
+    <option value="lendo">Lendo</option>
+    <option value="lido">Lido</option>
+  </select>
+</div>
+
+<div>
+  <label for="imagem">URL da capa</label>
+  <input
+    type="url"
+    id="imagem"
+    name="imagem"
+    placeholder="https://exemplo.com/capa.jpg"
+  >
+</div>
+
+<div>
+  <label for="comentario">Comentário sobre o livro</label>
+  <textarea
+    id="comentario"
+    name="comentario"
+    rows="4"
+    placeholder="O que você achou do livro?"
+  ></textarea>
+</div>
+
+<fieldset>
+  <legend>Avaliação do livro</legend>
+
+  <label>
+    <input type="radio" name="avaliacao" value="1">
+    ★
+  </label>
+
+  <label>
+    <input type="radio" name="avaliacao" value="2">
+    ★★
+  </label>
+
+  <label>
+    <input type="radio" name="avaliacao" value="3">
+    ★★★
+  </label>
+
+  <label>
+    <input type="radio" name="avaliacao" value="4">
+    ★★★★
+  </label>
+
+  <label>
+    <input type="radio" name="avaliacao" value="5">
+    ★★★★★
+  </label>
+</fieldset>
+
+   <button type="submit">Adicionar livro</button>
+
+  <button type="button" id="cancelar-edicao" hidden>
+    Cancelar edição
+  </button>
+</form>
+</dialog>
+<h2>Meus livros</h2>
+
+<div class="filtros">
+  <label for="pesquisa">Pesquisar livros</label>
+  <input
+    type="search"
+    id="pesquisa"
+    placeholder="Buscar por título ou autor"
+    disabled
+  >
+
+  <label for="filtro-status">Filtrar por status</label>
+  <select id="filtro-status" disabled>
+    <option value="">Todos os status</option>
+    <option value="quero-ler">Quero ler</option>
+    <option value="lendo">Lendo</option>
+    <option value="lido">Lido</option>
+  </select>
+
+  <p>Pesquisa e filtros em breve.</p>
+</div>
+
+<ul id="lista-livros"></ul>
+
+<script src="script.js"></script>
+</body>
+</html>

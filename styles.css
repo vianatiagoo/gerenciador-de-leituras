@@ -1,0 +1,222 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f5;
+  color: #27272a;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+h1 {
+  color: #6d28d9;
+}form {
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+form > div {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="url"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d4d4d8;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+fieldset {
+  margin: 0 0 16px;
+  padding: 12px;
+  border: 1px solid #d4d4d8;
+  border-radius: 6px;
+}
+
+button {
+  background-color: #6d28d9;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5b21b6;
+}
+.capa-livro {
+  width: 100px;
+  height: 150px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 12px;
+}
+#lista-livros {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+
+#lista-livros li {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #d4d4d8;
+  border-radius: 12px;
+  overflow-wrap: anywhere;
+}
+
+#lista-livros p {
+  margin: 8px 0;
+  white-space: pre-wrap;
+}
+
+#lista-livros button {
+  margin-top: 8px;
+  margin-right: 8px;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
+  form {
+    padding: 16px;
+  }
+}
+
+.filtros {
+  margin-bottom: 20px;
+}
+
+.filtros input,
+.filtros select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #d4d4d8;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+.filtros p {
+  font-size: 14px;
+  color: #52525b;
+}
+
+
+body {
+  max-width: 1120px;
+}
+
+#lista-livros {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+#lista-livros li {
+  min-width: 0;
+}
+
+.capa-livro {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  #lista-livros {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  #lista-livros {
+    grid-template-columns: 1fr;
+  }
+}
+#janela-livro {
+  width: calc(100% - 32px);
+  max-width: 420px;
+  max-height: 90vh;
+  padding: 24px;
+  border: none;
+  border-radius: 12px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  background-color: white;
+  color: #18181b;
+}
+
+#janela-livro::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#titulo-janela {
+  margin: 0 0 20px;
+  font-size: 20px;
+}
+
+#janela-livro form {
+  padding: 0;
+}
+
+button {
+  background-color: #18181b;
+}
+
+button:hover {
+  background-color: #3f3f46;
+}
+
+#cancelar-edicao {
+  background-color: #f4f4f5;
+  color: #27272a;
+  margin-left: 8px;
+}
+
+#cancelar-edicao:hover {
+  background-color: #e4e4e7;
+}
+
+@media (max-width: 600px) {
+  #janela-livro {
+    padding: 16px;
+  }
+}
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.cabecalho h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #18181b;
+}
+
+@media (max-width: 600px) {
+  .cabecalho h1 {
+    font-size: 18px;
+  }
+
+  .cabecalho button {
+    padding: 10px;
+    font-size: 12px;
+  }
+}
